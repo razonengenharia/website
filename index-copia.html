@@ -29,15 +29,17 @@
 <body class="bg-razon-light text-slate-800 font-sans antialiased">
 
     <header class="fixed w-full bg-white/95 backdrop-blur-sm shadow-sm z-50">
-        <div class="container mx-auto px-6 py-3 flex justify-between items-center">
+        <div class="container mx-auto px-6 py-3 flex justify-between items-center relative">
             <a href="#" class="flex items-center">
                 <img src="assets/logo_no_background.png" alt="Razon Engenharia" class="h-12 w-auto">
             </a>
-            <nav class="hidden md:flex space-x-8 font-semibold text-razon-dark">
-                <a href="#servicos" class="nav-link">Serviços</a>
-                <a href="#sobre" class="nav-link">Sobre</a>
-                <a href="#contato" class="bg-razon-copper text-white px-6 py-2.5 rounded-full hover:bg-razon-dark transition duration-300">Solicitar Orçamento</a>
+            
+            <nav id="nav-menu" class="hidden md:flex md:flex-row md:relative md:top-auto md:left-auto md:w-auto md:bg-transparent md:p-0 md:shadow-none md:space-x-8 space-y-4 md:space-y-0 flex-col absolute top-full left-0 w-full bg-white p-6 shadow-lg font-semibold text-razon-dark">
+                <a href="#servicos" class="nav-link block md:inline">Serviços</a>
+                <a href="#sobre" class="nav-link block md:inline">Sobre</a>
+                <a href="#contato" class="bg-razon-copper text-white px-6 py-2.5 rounded-full hover:bg-razon-dark transition duration-300 inline-block text-center">Solicitar Orçamento</a>
             </nav>
+            
             <button class="md:hidden text-razon-dark text-2xl" id="mobile-menu-btn">
                 <i class="fas fa-bars"></i>
             </button>
@@ -56,7 +58,6 @@
                 </p>
                 <div class="flex flex-col sm:flex-row gap-5 justify-center md:justify-start">
                     <a href="#servicos" class="bg-white text-razon-dark px-10 py-4 rounded-xl font-bold text-center transition hover:scale-105 shadow-lg">Conheça nossos Serviços</a>
-                    
                     <a href="#contato" class="border-2 border-white/40 bg-razon-dark/30 hover:bg-white/10 hover:scale-105 px-10 py-4 rounded-xl font-bold text-center transition backdrop-blur-sm">Falar com o Engenheiro</a>
                 </div>
             </div>
@@ -105,7 +106,7 @@
                     </div>
                     <h3 class="text-2xl font-bold mb-4 text-razon-dark">Correção de Fator de Potência</h3>
                     <p class="text-slate-600 leading-relaxed mb-6">
-                        Elimine as **multas por energia reativa excedente**. Dimensionamos e projetamos bancos de capacitores para otimizar o uso da energia e reduzir sua fatura mensal.
+                        Elimine as **multas por energia reativa excedente**. Dimensionamos e projetaram bancos de capacitores para otimizar o uso da energia e reduzir sua fatura mensal.
                     </p>
                     <img src="assets/cap.png" class="w-full h-32 object-cover rounded-xl mt-auto opacity-50 group-hover:opacity-100 transition">
                 </div>
@@ -149,33 +150,38 @@
 
     <section id="sobre" class="py-24 bg-razon-dark text-white relative overflow-hidden">
         <img src="assets/icone-z.jpg" alt="" class="absolute -right-20 -bottom-20 w-96 h-auto opacity-10 rotate-12">
-        <div class="container mx-auto px-6 grid md:grid-cols-5 gap-12 items-center relative z-10">
-            <div class="md:col-span-3">
+        <div class="container mx-auto px-6 grid md:grid-cols-3 gap-12 lg:gap-16 items-center relative z-10">
+            
+            <div class="flex flex-col justify-center h-full md:col-span-2">
                 <span class="text-razon-copper uppercase tracking-widest font-semibold text-sm">A Razon Engenharia</span>
                 <h2 class="text-4xl font-bold mt-3 mb-8 tracking-tight">Rigor Técnico e Visão de Negócio</h2>
-                <p class="text-slate-300 mb-10 leading-relaxed text-lg">
-                    Liderada pelo Engenheiro Eletricista Fernando Freire, a Razon nasce para preencher a lacuna entre a engenharia pura e a necessidade de resultados financeiros das empresas. Entregamos laudos e análises que viabilizam decisões estratégicas e economia real.
+                <p class="text-slate-300 mb-6 leading-relaxed text-lg">
+                    Liderada pelo Engenheiro Eletricista Fernando Freire, a Razon nasce para preencher a lacuna entre a engenharia pura e a necessidade de resultados financeiros das empresas.
                 </p>
-                <div class="flex flex-col sm:flex-row gap-6">
-                    <div class="flex items-center space-x-4 bg-slate-800 p-5 rounded-xl border border-white/10">
-                        <div class="text-razon-copper text-2xl"><i class="fas fa-certificate"></i></div>
-                        <div>
-                            <span class="font-bold block">CREA-SP</span>
-                            <span class="text-sm text-slate-400">Profissional Registrado</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="md:col-span-2 bg-slate-800 p-10 rounded-3xl border border-white/10 shadow-2xl text-center">
-                <p class="text-slate-200 italic mb-8 leading-relaxed">"A identidade da Razon reflete nossa essência: engenharia de alto nível com foco em resultados reais. Alinhamos o rigor normativo à inteligência de mercado para garantir máxima eficiência e segurança ao seu patrimônio."</p>
-                <div class="flex flex-col items-center gap-4">
-                    <div class="w-24 h-24 bg-razon-copper rounded-full flex items-center justify-center text-3xl font-bold border-4 border-slate-700 shadow-lg">FF</div>
+                <p class="text-slate-300 mb-10 leading-relaxed text-lg border-l-4 border-razon-copper pl-6 italic">
+                    "A identidade da Razon reflete nossa essência: engenharia de alto nível com foco em resultados reais. Alinhamos o rigor normativo à inteligência de mercado para garantir máxima eficiência e segurança ao seu patrimônio."
+                </p>
+                
+                <div class="flex items-center space-x-4 bg-slate-800 p-5 rounded-xl border border-white/10 w-fit">
+                    <div class="text-razon-copper text-2xl"><i class="fas fa-certificate"></i></div>
                     <div>
-                        <p class="font-bold text-lg">Fernando Freire</p>
-                        <p class="text-sm text-razon-copper uppercase tracking-widest mt-1">Engenheiro Titular</p>
+                        <span class="font-bold block">CREA-SP</span>
+                        <span class="text-sm text-slate-400">Profissional Registrado</span>
                     </div>
                 </div>
             </div>
+
+            <div class="relative group md:col-span-1">
+                <div class="absolute inset-0 bg-razon-copper rounded-3xl transform translate-x-3 translate-y-3 transition group-hover:translate-x-1 group-hover:translate-y-1"></div>
+                <div class="relative bg-slate-800 rounded-3xl overflow-hidden border border-white/10 shadow-2xl">
+                    <img src="assets/Fernando.jpeg" alt="Engenheiro Fernando Freire no Campo" class="w-full h-auto block">
+                    <div class="p-5 bg-gradient-to-t from-slate-900 via-slate-900/80 to-transparent absolute bottom-0 w-full">
+                        <p class="font-bold text-lg text-white">Fernando Freire</p>
+                        <p class="text-xs text-razon-copper uppercase tracking-widest mt-1">Engenheiro Titular</p>
+                    </div>
+                </div>
+            </div>
+
         </div>
     </section>
 

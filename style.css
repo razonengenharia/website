@@ -29,38 +29,34 @@
     width: 100%;
 }
 
-/* Estilo Premium dos Cards de Serviço */
+/* Estilo Premium dos Cards de Serviço (Ajustado para casar com Tailwind) */
 .service-card {
-    padding: 3rem;
-    border-radius: 2rem;
-    background-color: #F8F9FA;
-    border: 1px solid #E9ECEF;
     transition: all 0.4s ease;
     cursor: pointer;
 }
 .service-card:hover {
     transform: translateY(-8px);
     box-shadow: 0 25px 50px -12px rgba(26, 46, 70, 0.15);
-    border-color: #B87333; /* Cobre ao hover */
+    border-color: #B87333 !important; /* Força a borda cobre no hover */
 }
 
-/* Ícones dos Cards */
+/* Ícones dos Cards (Padronização de tamanho e transição) */
 .card-icon {
-    width: 4rem;
-    height: 4rem;
+    width: 3.5rem;
+    height: 3.5rem;
     background-color: rgba(184, 115, 51, 0.1); /* Fundo cobre sutil */
     color: #B87333;
-    border-radius: 1rem;
+    border-radius: 0.75rem;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 1.5rem;
-    margin-bottom: 2rem;
-    transition: all 0.3s;
+    font-size: 1.35rem;
+    transition: all 0.3s ease;
 }
+/* Efeito de inversão de cor quando passa o mouse no card */
 .service-card:hover .card-icon {
     background-color: #B87333;
-    color: white;
+    color: #FFFFFF;
 }
 
 /* Animação Flutuante para o Ícone Z no Hero */
